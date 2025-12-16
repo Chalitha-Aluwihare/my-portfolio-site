@@ -1,347 +1,1143 @@
-import React from "react";
-import background from "../../../assets/landingPage/Background.png"
-import mobileCover from "../../../assets/landingPage/mobileCover.png"
-import mobileCover02 from "../../../assets/landingPage/mobileCover02.png"
-import background02 from "../../../assets/landingPage/Background-1.png"
-import matrix from "../../../assets/landingPage/matrix.mp4"
-import matrixForMobile from "../../../assets/landingPage/metrixForMobile.mp4"
-import cover01 from "../../../assets/landingPage/Cover-1.png"
-import cover02 from "../../../assets/landingPage/Cover-2.png"
-import verify from "../../../assets/landingPage/verified-badge.png"
-import cover03 from "../../../assets/landingPage/Cover-3.png"
-import cover04 from "../../../assets/landingPage/Cover-3.mp4"
-import myProfileForMobile01 from "../../../assets/landingPage/myProfileForMobileBg.png"
-import myProfileForMobile02 from "../../../assets/landingPage/myProfileForMobileBg02.png"
-import line01 from "../../../assets/landingPage/Line-1.png"
-import projectCart01 from "../../../assets/landingPage/projectCart.png"
-import projectCart02 from "../../../assets/landingPage/projectCart02.png"
-import projectCart03 from "../../../assets/landingPage/projectCart03.png"
-import projectCart04 from "../../../assets/landingPage/projectCart04.png"
-import star from "../../../assets/landingPage/Star.png"
-import Cover03 from "../../../assets/landingPage/City.mp4"
-import logoBar from "../../../assets/landingPage/LogoBar.png"
-import { TbPlayerTrackNextFilled } from "react-icons/tb"
+import React, { useEffect } from "react";
 import { IoLogoYoutube } from "react-icons/io5";
 import { FaTwitter } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
+import { BsLink45Deg } from "react-icons/bs";
+import { FaPython } from "react-icons/fa";
+import { SiPreact } from "react-icons/si";
+import { IoLogoFigma } from "react-icons/io5";
+import { SiAdobephotoshop } from "react-icons/si";
+import { IoLogoNodejs } from "react-icons/io5";
+import { SiFastapi } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiCss3 } from "react-icons/si";
+import { FaHtml5 } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { FaLinux } from "react-icons/fa";
+import { FaWindows } from "react-icons/fa";
+import { SiMacos } from "react-icons/si";
+import { SiWireshark } from "react-icons/si";
+import { FaFlutter } from "react-icons/fa6";
+import { FcLandscape } from "react-icons/fc";
+import { FcFilm } from "react-icons/fc";
+import { FaRocket } from "react-icons/fa";
+import { ImCool2 } from "react-icons/im";
+import { ImGrin2 } from "react-icons/im";
+import { ImHipster2 } from "react-icons/im";
+import { ImPacman } from "react-icons/im";
+import Profile from '../../../assets/landingPage/profile.png';
+import P01 from '../../../assets/landingPage/P01.jpeg';
 
 const LandingPage = () => {
 
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            document.documentElement.style.setProperty("--mouse-x", `${e.clientX}px`);
+            document.documentElement.style.setProperty("--mouse-y", `${e.clientY}px`);
+        };
+
+        document.addEventListener("mousemove", handleMouseMove);
+        return () => document.removeEventListener("mousemove", handleMouseMove);
+    }, []);
+
     return (
         <>
-            <h1 className=" absolute z-20 font-montserrat font-extrabold text-[70px] mt-[70px] ml-[20px] sm:text-[100px] md:text-[100px]  xl:text-[100px] text-white  xl:mt-[150px]  xl:ml-[100px]">Protecting</h1>
-            <h1 className="absolute z-20 font-montserrat font-bold text-[65px] mt-[130px] ml-[20px] xl:text-[85px] text-white  xl:mt-[230px]  xl:ml-[100px] ">systems</h1>
-            <h2 className=" absolute z-20 font-montserrat font-regular text-[40px] mt-[200px] ml-[20px] xl:text-[55px] text-white  xl:mt-[320px]  xl:ml-[100px] ">Preserving trust</h2>
-            <div className=" absolute z-40 py-[3px] px-[8px] xl:py-[10px] xl:px-[25px] bg-gradient-to-r from-[#EB93FF] to-[#8515E0] rounded-full mt-[260px] ml-[20px] xl:mt-[400px] xl:ml-[100px] text-white flex items-center gap-2 ">
-                <button className=" font-montserrat font-regular text-[20px] xl:text-[20px] text-white">Read More</button>
-                < TbPlayerTrackNextFilled className="xl:w-6 xl:h-6 " />
-            </div>
-            <div className=" absolute z-40 py-[3px] px-[8px] xl:py-[10px] xl:px-[25px] bg-gradient-to-r from-[#EB93FF] to-[#8515E0] rounded-full mt-[260px] ml-[170px] xl:mt-[400px] xl:ml-[100px] text-white flex items-center gap-2 ">
-                <button className=" font-montserrat font-regular text-[20px] xl:text-[20px] text-white">Read More</button>
-                < TbPlayerTrackNextFilled className="xl:w-6 xl:h-6 " />
-            </div>
-            <div className="absolute z-40 mt-[320px] ml-[20px] text-white">
-                <div className='flex items-center justify-center gap-3'>
-                    <FaFacebook size={30} />
-                    <IoLogoYoutube size={30} />
-                    <FaTwitter size={30} />
-                    <FaSquareInstagram size={30} />
-                    <FaLinkedin size={30} />
-                    <FaGithub size={30} />
-                </div>
-            </div>
+            <>
+                <div className="grid grid-cols-1 lg:grid-cols-5 lg:h-screen lg:overflow-hidden bg-[#1E0044] lg:px-30 px-5 selection:bg-[#E2A6FF]">
 
-            <div className="">
-                <video className="absolute z-30 top-0 mix-blend-soft-light sm:hidden md:hidden xl:hidden" autoPlay loop muted playsInline src={matrixForMobile} alt="" />
-                <video className="absolute z-30 top-0 mix-blend-soft-light hidden sm:block md:block xl:block" autoPlay loop muted playsInline src={matrix} alt="" />
-                <img className="absolute z-10 top-0 hidden sm:block md:block xl:block" src={background} alt="" />
-                <img className="absolute z-10 top-0 sm:hidden md:hideen xl:hidden" src={mobileCover} alt="" />
-                <img className="absolute z-40 top-0 hidden sm:block md:block xl:block " src={background02} alt="" />
-                <img className="absolute z-40 top-0 sm:hidden md:hidden xl:hidden" src={mobileCover02} alt="" />
+                    <div className="fixed inset-0 pointer-events-none circle-hover z-0"></div>
 
-            </div>
+                    {/* LEFT FIXED SIDEBAR */}
+                    <div className="lg:col-span-2  lg:sticky lg:top-0 lg:h-screen flex flex-col lg:mt-20 mt-5">
+                        <img src={Profile} alt="Profile" className="w-[250px]" />
+                        <h2 className="font-ibmmono font-extrabold text-[40px] text-[#a263f2] leading-none mt-5">Chalitha Aluwihare</h2>
+                        <p className="font-ibmmono font-semibold leading-tight text-sm text-[#dcdcdc] mt-2">
+                            Aspiring Cybersecurity Engineer
+                        </p>
+                        <p className="font-ibmmono font-semibold leading-tight text-sm text-[#dcdcdc] mt-2">
+                            IT(Hons) Undergraduate
+                        </p>
+                        <div className="flex items-center mt-3 gap-3">
 
+                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
+                                About Me
+                            </p>
+                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer ">
+                                |
+                            </p>
 
-            <div className="absolute z-50 mt-[910px] xl:mt-[790px] w-full bg-[#DFDFDF] text-white">
-
-                <img className="absolute z-60 xl:mt-6 hidden" src={cover01} alt="" />
-                <img className="absolute z-60 hidden" src={cover02} alt="" />
-                <img className="absolute z-60 xl:mt-6 sm:hidden" src={myProfileForMobile02} alt="" />
-                <img className="absolute z-60 sm:hidden" src={myProfileForMobile01} alt="" />
-
-                <div className="absolute z-70 xl:mt-[130px] xl:ml-[650px]">
-                    <div>
-                        <div className=" flex items-center ml-[240px] mt-[80px] ">
-                            <h1 className=" font-montserrat font-bold text-[30px] xl:text-[40px] text-black">Chalitha Aluwihare</h1>
-                            <img className=" font-montserrat font-bold xl:text-[40px] text-black w-8" src={verify} alt="" />
+                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
+                                Journay
+                            </p>
+                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer ">
+                                |
+                            </p>
+                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
+                                Projects
+                            </p>
                         </div>
-                        <p className=" font-montserrat font-regular xl:text-[20px] text-black sm:w-[600px] ml-[240px] ">Uva Wellassa University Undergraduate
-                            Aspiring Cybersecurity Professional & Full-Stack Developer</p>
-                    </div>
-                    <div className="flex sm:items-center items-center ml-[90px] sm:gap-3 gap-2 mt-2 flex-col ">
-                        <div className="py-[10px] px-[35px] bg-gradient-to-r from-[#EB93FF] to-[#8515E0] rounded-full text-white flex items-center gap-2 ">
-                            <button className=" font-montserrat font-regular xl:text-[20px] text-white">View Projects</button>
-                            < TbPlayerTrackNextFilled className="w-6 h-6" />
+                        <div className="flex items-center mt-3 gap-3">
+
+                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
+                                Resume Downlaod
+                            </p>
+                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer ">
+                                |
+                            </p>
+
+                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
+                                Contact
+                            </p>
+
                         </div>
-                        <div className=" py-[10px] px-[35px] bg-gradient-to-r from-[#EB93FF] to-[#8515E0] rounded-full text-white flex items-center gap-2 ">
-                            <button className=" font-montserrat font-regular xl:text-[20px] text-white">Download CV</button>
-                            < TbPlayerTrackNextFilled className="w-6 h-6" />
-                        </div>
-                        <div className="py-[10px] px-[35px] bg-gradient-to-r from-[#EB93FF] to-[#8515E0] rounded-full text-white flex items-center gap-2 ">
-                            <button className=" font-montserrat font-regular xl:text-[20px] text-white ">Contact Me</button>
-                            < TbPlayerTrackNextFilled className="w-6 h-6" />
+
+
+                        <div className='flex items-center gap-3 text-[#dcdcdc] mt-6'>
+                            <FaFacebook size={25} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+                            <IoLogoYoutube size={25} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+
+                            <FaLinkedin size={25} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+                            <FaGithub size={25} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
                         </div>
                     </div>
-                </div>
 
-
-            </div>
-
-            <div className="absolute z-110 bg-[#590967] w-full h-[330px] mt-[1300px] xl:mt-[1180px]  text-white text-center space-y-5 px-6">
-                <h1 className="font-montserrat font-bold xl:text-[35px] mt-[20px] text-[25px] text-[#EB93FF] xl:pt-10">About Me</h1>
-                <p className="
-                font-montserrat font-light xl:text-[18px] text-white xl:pb-[50px]
-                ">I am a 3rd-year BICT(Hons) student at Uva Wellassa University,
-                    specializing in cybersecurity with hands-on experience in ethical hacking, network security, and incident response. I enjoy solving complex security challenges and building robust, secure systems. Alongside cybersecurity, I am passionate about full-stack development, UI/UX design, and emerging technologies. As a tech enthusiast, I strive to create innovative, secure, and user-friendly digital solutions while continuously learning and growing in the field.</p>
-            </div>
-
-            {/* Skills Section */}
-
-            <div className="absolute z-40 flex flex-col items-center justify-center w-full mt-[1400px] xl:mt-[1460px]  text-center text-white p-10 px-5 h-full space-y-10">
+                    {/* RIGHT SCROLLABLE CONTENT */}
 
 
 
-                {/* TOP ROW – 3 HEXAGONS */}
-                <div className="flex xl:gap-6 gap-3 mt-[160px]">
-                    {Array(3).fill(0).map((_, i) => (
-                        <div key={i} className="relative xl:w-[200px] w-[120px] xl:h-[230px] flex items-center justify-center ">
+                    <div className="lg:col-span-3 lg:h-screen lg:overflow-y-auto no-scrollbar  text-[#dcdcdc] lg:mt-10 mt-5">
+                        <div className="flex items-center mt-6 gap-3 mb-5">
+                            {/*<ImPacman color="#a263f2" size={25} className="text-white" />*/}
+                            <h1 className="font-ibmmono font-bold text-xl text-[#a263f2]">Protecting Systems Preventing Trust</h1>
+                        </div>
+                        <p className="font-ibmmono font-light mb-6 text-sm ml-3">
+                            <a href="https://www.example.com/cybersecurity" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
+                                Aspiring Cybersecurity Engineer
+                            </a> |
+                            <a href="https://www.uwu.ac.lk/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
+                                BICT(Hons) Undergraduate at Uva Wellassa University
+                            </a>. Passionate about
+                            <a href="https://www.kali.org/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
+                                ethical hacking
+                            </a>,
+                            <a href="https://www.cisco.com/c/en/us/products/security/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
+                                network security
+                            </a>, and protecting systems. Learning tools for
+                            <a href="https://www.offensive-security.com/pwk-oscp/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
+                                penetration testing
+                            </a>,
+                            <a href="https://www.linux.org/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
+                                Linux
+                            </a>, and
+                            <a href="https://owasp.org/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
+                                secure software development
+                            </a>. Open to internships and hands-on cybersecurity projects.
+                        </p>
 
-                            {/* Text */}
-                            <div className="absolute z-80 text-center text-white ">
-                                <h2 className="font-bold text-[14px] xl:mb-2">Networking</h2>
-                                <p className="text-[13px]">TCP/IP</p>
-                                <p className="text-[13px]">Firewalls</p>
-                                <p className="text-[13px]">VPNs</p>
+
+
+
+
+                        <hr className="border mt-13 opacity-20" />
+
+                        <div className="flex items-center mt-6 gap-3 mb-5">
+
+                            <h1 className="font-ibmmono font-bold text-[#a263f2] text-xl">Technical Expertise</h1>
+                        </div>
+                        {/* Skills Section I */}
+                        <div className=" lg:flex items-center gap-3 text-[#dcdcdc] mt-6">
+                            {/* Programming Languages Section */}
+                            <div className="my-2 p-4 rounded-xl border border-white/20 
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                                <div className="">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Programming Languages
+                                    </h3>
+                                    <div className="ml-3 flex items-center gap-3 text-[#dcdcdc] mt-4 ">
+                                        <FaPython size={35} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+                                        <FaJava size={35} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+                                        <IoLogoJavascript size={35} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            {/* Frontend Technologies Section */}
+                            <div className="my-3 p-4 rounded-xl border border-white/20 
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300 hover:text-[#E2A6FF] transition-all duration-300 cursor-pointer">
+
+                                <div className="">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Frontend Technologies
+                                    </h3>
+                                    <div className="ml-3 flex items-center gap-3 text-[#dcdcdc] mt-4 ">
+
+                                        <FaHtml5 className="text-white hover:text-[#E2A6FF] transition-colors duration-300" size={35} />
+                                        <SiCss3 className="text-white hover:text-[#E2A6FF] transition-colors duration-300" size={35} />
+                                        <RiTailwindCssFill className="text-white hover:text-[#E2A6FF] transition-colors duration-300" size={35} />
+                                        <FaFlutter size={35} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+                                        <IoLogoFigma className="text-white hover:text-[#E2A6FF] transition-colors duration-300" size={35} />
+                                    </div>
+                                </div>
+
+
                             </div>
 
-                            {/* Hexagon Image */}
-                            <img className="absolute z-50 " src={star} />
+
+
+
                         </div>
-                    ))}
-                </div>
+                        {/* Skills Section II */}
+                        <div className=" lg:flex items-center gap-3 text-[#dcdcdc] ">
+                            {/* Backend & APIs Section */}
+                            <div className="my-3 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
 
-                {/* BOTTOM ROW – 2 HEXAGONS */}
-                <div className="flex xl:gap-6 xl:mt-[80px] gap-3">
-                    {Array(2).fill(0).map((_, i) => (
-                        <div key={i} className="relative xl:w-[200px] w-[120px] h-[150px] flex items-center justify-center">
+                                <div className="">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Backend & APIs
+                                    </h3>
+                                    <div className="ml-3 flex items-center gap-3 text-[#dcdcdc] mt-4">
+                                        <IoLogoNodejs size={35} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+                                        <SiFastapi size={35} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
 
-                            <div className="absolute z-80 text-center text-white">
-                                <h2 className="font-bold text-[14px] xl:mb-2">Networking</h2>
-                                <p className="text-[13px]">TCP/IP</p>
-                                <p className="text-[13px]">Firewalls</p>
-                                <p className="text-[13px]">VPNs</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            {/* Databases Section */}
+                            <div className="my-3 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                                <div className="">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Databases
+                                    </h3>
+                                    <div className="ml-3 flex items-center gap-3 text-[#dcdcdc] mt-4 ">
+
+                                        <SiMongodb size={35} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+                                        <BiLogoPostgresql size={35} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+                                    </div>
+                                </div>
+
+
                             </div>
 
-                            <img className="absolute z-50" src={star} />
+                            {/* Networking Section */}
+                            <div className="my-3 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                                <div className="">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Networking
+                                    </h3>
+                                    <div className="ml-3 flex items-center gap-3 text-[#dcdcdc] mt-4 ">
+
+                                        <SiWireshark size={35} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+
+
                         </div>
-                    ))}
+
+                        <hr className="border mt-5 opacity-20" />
+
+
+                        <div className="flex items-center mt-6 gap-3 mb-7">
+
+                            <h1 className="font-ibmmono font-bold text-[#a263f2] text-xl">Cybersecurity & Technical Certifications</h1>
+                        </div>
+                        {/* Cetification Section */}
+                        <div className="mt-3 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="">
+                                <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                    ISC2 CC Exam
+                                </h3>
+                                <p className="font-ibmmono text-sm font-light mb-1">
+                                    International certification focusing on cybersecurity principles, ethical hacking, and security management.
+                                </p>
+
+                                <div className="flex gap-3 flex-wrap mt-3">
+                                    <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                        Network Security
+                                    </button>
+                                    <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                        Risk Management
+                                    </button>
+                                    <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                        Ethical Hacking
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div className="mt-3 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="">
+                                <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                    ISC2 CC Exam
+                                </h3>
+                                <p className="font-ibmmono text-sm font-light mb-1">
+                                    International certification focusing on cybersecurity principles, ethical hacking, and security management.
+                                </p>
+
+                                <div className="flex gap-3 flex-wrap mt-3">
+                                    <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                        Network Security
+                                    </button>
+                                    <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                        Risk Management
+                                    </button>
+                                    <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                        Ethical Hacking
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <hr className="border mt-13 opacity-20" />
+                        <div className="flex items-center mt-6 gap-3">
+
+                            <h1 className="font-ibmmono font-bold text-[#a263f2] text-xl">My Technology & Cybersecurity Journey</h1>
+                        </div>
+                        {/* my journy */}
+                        <div className="mt-8 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="lg:flex items-start justify-between gap-15">
+                                <div className="flex-shrink-0">
+                                    <p className="font-light font-sm text-white opacity-50 text-[14px] opacity-sm ">01. 2022 to Present</p>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Graphic Design & Entrepreneurship
+                                    </h3>
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        I learned Adobe Photoshop and started my own flyer design business.
+                                        I served 100+ clients, including well-known professionals, delivering
+                                        creative and high-quality marketing designs.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Adobe Photoshop
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Flyer Design
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Client Communication
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Business Handling & Freelancing
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="lg:flex items-start justify-between gap-15">
+                                <div className="flex-shrink-0">
+                                    <p className="font-light font-sm text-white opacity-50 text-[14px] opacity-sm ">02. 2023 to Present</p>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        UI/UX Design with Figma
+                                    </h3>
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        I learned Figma and moved from flyer design to UI/UX design.
+                                        I completed 5–6 mobile and web UI projects and won the first
+                                        round of a KDU(2024-2025) UI/UX competition.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Figma
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            UI/UX principles
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Wireframing & prototyping
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Mobile & web app design
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="lg:flex items-start justify-between gap-15">
+                                <div className="flex-shrink-0">
+                                    <p className="font-light font-sm text-white opacity-50 text-[14px] opacity-sm ">03. 2024 to Present</p>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Frontend Web Development
+                                    </h3>
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        I learned HTML, CSS, JavaScript, Tailwind CSS, and basic animations.
+                                        Using these technologies, I completed two frontend projects with
+                                        responsive and modern user interfaces.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            HTML, CSS, JavaScript
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Tailwind CSS
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Responsive design
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Basic animations (Motion)
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="lg:flex items-start justify-between gap-15">
+                                <div className="flex-shrink-0">
+                                    <p className="font-light font-sm text-white opacity-50 text-[14px] opacity-sm ">04. 2025 to Present</p>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Backend Development (Node.js & MongoDB)
+                                    </h3>
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        I learned Node.js, Express.js, and MongoDB.
+                                        I completed one full-stack project, handling backend
+                                        logic, APIs, and database management.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Node.js
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Express.js
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            MongoDB
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            REST APIs
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Backend logic
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="lg:flex items-start justify-between gap-15">
+                                <div className="flex-shrink-0">
+                                    <p className="font-light font-sm text-white opacity-50 text-[14px] opacity-sm ">05. 2025 to Present</p>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        JavaFX Desktop Application Development
+                                    </h3>
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        I developed a JavaFX-based university parking management system.
+                                        Users can view slots, book parking, and select time durations using
+                                        a real-time MongoDB database.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            OOP Concepts
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Java & JavaFX
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Scene Builder
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Desktop application design
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Database integration (MongoDB)
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="lg:flex items-start justify-between gap-15">
+                                <div className="flex-shrink-0">
+                                    <p className="font-light font-sm text-white opacity-50 text-[14px] opacity-sm ">06. 2025 to Present</p>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Python for Cybersecurity
+                                    </h3>
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        I completed a Python for Cybersecurity course on Udemy.
+                                        I learned scripting for automation, security tasks,
+                                        and basic attack and defense concepts.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Python scripting
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Automation
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Security-focused programming
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Basic cyber tools usage
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div className="mt-10 p-4 rounded-xl border border-white/20 
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="lg:flex items-start justify-between gap-15">
+                                <div className="flex-shrink-0">
+                                    <p className="font-light font-sm text-white opacity-50 text-[14px] opacity-sm ">07. 2025 to Present</p>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Network Analysis with Wireshark
+                                    </h3>
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        I learned how to analyze network traffic using Wireshark.
+                                        I practiced capturing packets and identifying suspicious network activities.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Wireshark
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Packet analysis
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Network traffic monitoring
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Basic threat detection
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div className="mt-10 p-4 rounded-xl border border-white/20 
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="lg:flex items-start justify-between gap-15">
+                                <div className="flex-shrink-0">
+                                    <p className="font-light font-sm text-white opacity-50 text-[14px] opacity-sm ">08. 2025 to Present</p>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Shell Scripting
+                                    </h3>
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        I completed a shell scripting course and learned to automate tasks,
+                                        manage files, and write scripts for system-level operations.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Bash scripting
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Linux commands
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            File & process handling
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="lg:flex items-start justify-between gap-15">
+                                <div className="flex-shrink-0">
+                                    <p className="font-light font-sm text-white opacity-50 text-[14px] opacity-sm ">09. 2025 to Present</p>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Penetration Testing & Networking
+                                    </h3>
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        I completed penetration testing training and Cisco Network Fundamentals.
+                                        I learned basic ethical hacking techniques and strong networking foundations.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Penetration testing basics
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Ethical hacking concepts
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Networking fundamentals
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Security mindset
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div className="mt-10 p-4 rounded-xl border border-white/20 
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300">
+
+                            <div className="lg:flex items-start justify-between gap-15">
+                                <div className="flex-shrink-0">
+                                    <p className="font-light font-sm text-white opacity-50 text-[14px] opacity-sm ">10. 2025 to Present</p>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        ISC2 Certified in Cybersecurity (CC)
+                                    </h3>
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        I completed the ISC2 Certified in Cybersecurity (CC) exam, gaining knowledge in
+                                        security principles, risk management, and cyber defense fundamentals.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Cybersecurity fundamentals
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Risk management
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Security controls
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Industry best practices
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <hr className="border mt-13 opacity-20" />
+                        {/* Projects */}
+                        
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300 ">
+
+                            <div className="lg:flex items-start justify-between gap-5">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center gap-2">
+                                        <p className="font-light text-white opacity-50 text-[14px]">2021</p>
+
+                                        <a
+                                            href="https://www.linkedin.com/posts/chalitha-aluwihare-856781219_webdevelopment-tailwindcss-responsivedesign-activity-7399257520076185600-Ji0w"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaLinkedin
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+
+                                        <a
+                                            href="https://github.com/Chalitha-Aluwihare/responsive-ui-practice"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaGithub
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+                                    </div>
+
+
+                                    <img src={P01} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Responsive Grid Layout Practice for Beginners
+                                    </h3>
+
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        Adobe Photoshop is a powerful software used for editing,
+                                        designing, and creating images. It allows photo retouching,
+                                        graphic design, digital painting, and creating professional
+                                        visuals for web and print.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            ReactJS
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            TailwindCSS
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300 ">
+
+                            <div className="lg:flex items-start justify-between gap-5">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center gap-2">
+                                        <p className="font-light text-white opacity-50 text-[14px]">2021</p>
+
+                                        <a
+                                            href="https://www.linkedin.com/posts/chalitha-aluwihare-856781219_webdevelopment-tailwindcss-responsivedesign-activity-7399257520076185600-Ji0w"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaLinkedin
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+
+                                        <a
+                                            href="https://github.com/Chalitha-Aluwihare/responsive-ui-practice"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaGithub
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+                                    </div>
+
+
+                                    <img src={P01} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Responsive Grid Layout Practice for Beginners
+                                    </h3>
+
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        Adobe Photoshop is a powerful software used for editing,
+                                        designing, and creating images. It allows photo retouching,
+                                        graphic design, digital painting, and creating professional
+                                        visuals for web and print.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            ReactJS
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            TailwindCSS
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300 ">
+
+                            <div className="lg:flex items-start justify-between gap-5">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center gap-2">
+                                        <p className="font-light text-white opacity-50 text-[14px]">2021</p>
+
+                                        <a
+                                            href="https://www.linkedin.com/posts/chalitha-aluwihare-856781219_webdevelopment-tailwindcss-responsivedesign-activity-7399257520076185600-Ji0w"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaLinkedin
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+
+                                        <a
+                                            href="https://github.com/Chalitha-Aluwihare/responsive-ui-practice"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaGithub
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+                                    </div>
+
+
+                                    <img src={P01} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Responsive Grid Layout Practice for Beginners
+                                    </h3>
+
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        Adobe Photoshop is a powerful software used for editing,
+                                        designing, and creating images. It allows photo retouching,
+                                        graphic design, digital painting, and creating professional
+                                        visuals for web and print.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            ReactJS
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            TailwindCSS
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300 ">
+
+                            <div className="lg:flex items-start justify-between gap-5">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center gap-2">
+                                        <p className="font-light text-white opacity-50 text-[14px]">2021</p>
+
+                                        <a
+                                            href="https://www.linkedin.com/posts/chalitha-aluwihare-856781219_webdevelopment-tailwindcss-responsivedesign-activity-7399257520076185600-Ji0w"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaLinkedin
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+
+                                        <a
+                                            href="https://github.com/Chalitha-Aluwihare/responsive-ui-practice"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaGithub
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+                                    </div>
+
+
+                                    <img src={P01} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Responsive Grid Layout Practice for Beginners
+                                    </h3>
+
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        Adobe Photoshop is a powerful software used for editing,
+                                        designing, and creating images. It allows photo retouching,
+                                        graphic design, digital painting, and creating professional
+                                        visuals for web and print.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            ReactJS
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            TailwindCSS
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300 ">
+
+                            <div className="lg:flex items-start justify-between gap-5">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center gap-2">
+                                        <p className="font-light text-white opacity-50 text-[14px]">2021</p>
+
+                                        <a
+                                            href="https://www.linkedin.com/posts/chalitha-aluwihare-856781219_webdevelopment-tailwindcss-responsivedesign-activity-7399257520076185600-Ji0w"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaLinkedin
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+
+                                        <a
+                                            href="https://github.com/Chalitha-Aluwihare/responsive-ui-practice"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaGithub
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+                                    </div>
+
+
+                                    <img src={P01} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Responsive Grid Layout Practice for Beginners
+                                    </h3>
+
+                                    <h1 className="font-ibmmono text-[10px] font-light">
+                                        Adobe Photoshop is a powerful software used for editing,
+                                        designing, and creating images. It allows photo retouching,
+                                        graphic design, digital painting, and creating professional
+                                        visuals for web and print.
+                                    </h1>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            ReactJS
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            TailwindCSS
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        
+                        
+                        
+
+
+
+
+
+
+
+                        <hr className="border mt-13 opacity-50" />
+                        <p className="mt-10 font-light text-[10px] font-ibmmono">Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Next.js and Tailwind CSS, deployed with Vercel. All text is set in the Inter typeface.</p>
+                        <p className="mb-30 mt-2 font-light text-[9px] font-ibmmono">© 2025 Chalitha Aluwihare. All rights reserved.</p>
+
+
+
+                    </div>
+
+
+
+
                 </div>
-                <div className="absolute w-full"> <img src={cover04} alt="" /> </div>
-
-            </div>
+            </>
 
 
-
-
-
-
-            {/*<div class="absolute z-90 xl:mt-[2810px] border-t-6 border-purple-500 w-full" ></div>*/}
-            <div className="absolute z-30 w-full mt-[1930px] xl:mt-[2260px] bg-[#590967] text-center space-y-5 text-white p-10 px-5 h-full">
-                {/* Title */}
-                <h1 className="font-montserrat font-bold xl:text-[35px] text-[#EB93FF]">Certificates Section</h1>
-
-                <div className="flex justify-center gap-[10px] xl:mt-[50px] mt-[80px]">
-
-
-                    {/* ITEM 1 */}
-                    <div className="relative flex items-center justify-center text-center w-[200px] xl:mt-[100px]">
-
-                        <div className="absolute z-10">
-                            <h2 className="font-bold text-[#EB93FF] text-[14px] xl:mb-2">Networking</h2>
-                            <p className="text-[13px]">TCP/IP</p>
-                            <p className="text-[13px]">Firewalls</p>
-                            <p className="text-[13px]">VPNs</p>
-                        </div>
-
-                        <div className="absolute">
-                            <img src={star} alt="Star" />
-                        </div>
-
-                    </div>
-
-                    {/* ITEM 1 */}
-                    <div className="relative flex items-center justify-center text-center w-[200px] xl:mt-[100px]">
-
-                        <div className="absolute z-10">
-                            <h2 className="font-bold text-[#EB93FF] text-[14px] xl:mb-2">Networking</h2>
-                            <p className="text-[13px]">TCP/IP</p>
-                            <p className="text-[13px]">Firewalls</p>
-                            <p className="text-[13px]">VPNs</p>
-                        </div>
-
-                        <div className="absolute">
-                            <img src={star} alt="Star" />
-                        </div>
-
-                    </div>
-
-                    {/* ITEM 1 */}
-                    <div className="relative flex items-center justify-center text-center w-[200px] xl:mt-[100px]">
-
-                        <div className="absolute z-10">
-                            <h2 className="font-bold text-[#EB93FF] text-[14px] xl:mb-2">Networking</h2>
-                            <p className="text-[13px]">TCP/IP</p>
-                            <p className="text-[13px]">Firewalls</p>
-                            <p className="text-[13px]">VPNs</p>
-                        </div>
-
-                        <div className="absolute">
-                            <img src={star} alt="Star" />
-                        </div>
-
-                    </div>
-
-                    {/* ITEM 1 */}
-                    <div className="relative flex items-center justify-center text-center w-[200px] xl:mt-[100px]">
-
-                        <div className="absolute z-10">
-                            <h2 className="font-bold text-[#EB93FF] text-[14px] xl:mb-2">Networking</h2>
-                            <p className="text-[13px]">TCP/IP</p>
-                            <p className="text-[13px]">Firewalls</p>
-                            <p className="text-[13px]">VPNs</p>
-                        </div>
-
-                        <div className="absolute">
-                            <img src={star} alt="Star" />
-                        </div>
-
-                    </div>
-
-                    {/* ITEM 1 */}
-                    <div className="relative flex items-center justify-center text-center w-[200px] xl:mt-[100px]">
-
-                        <div className="absolute z-10">
-                            <h2 className="font-bold text-[#EB93FF] text-[14px] xl:mb-2">Networking</h2>
-                            <p className="text-[13px]">TCP/IP</p>
-                            <p className="text-[13px]">Firewalls</p>
-                            <p className="text-[13px]">VPNs</p>
-                        </div>
-
-                        <div className="absolute">
-                            <img src={star} alt="Star" />
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-
-
-            </div>
-
-            <div className="absolute z-50 w-full mt-[2600px] xl:mt-[2690px] w-full text-center bg-black  text-white h-full">
-                {/* Title */}
-                <div className="absolute z-30 flex flex-col w-full text-center xl:mt-[50px]">
-                    <h1 className=" font-montserrat font-bold xl:text-[35px] ">Projects Section</h1>
-                    <h1 className=" font-montserrat font-regular xl:text-[30px]  ">Web Application Development</h1>
-                </div>
-
-                <video className="absolute z-10 w-full opacity-90 "
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    src={Cover03} alt="" />
-
-
-                <div className="flex xl:mt-[190px]">
-
-                    {/* Project Cart - 01 */}
-                    <div className="py-[30px] px-[10px] flex flex-col items-center overflow-hidden w-[350px]">
-                        <h1 className="absolute z-40 xl:mt-[150px] font-montserrat font-bold xl:text-[20px] text-white">MERN Stack <br /> Web App with Nutrition <br /> Tracking & AI Food <br />Recommendation</h1>
-                        <img className="absolute z-30 rounded-xl w-[300px] opacity-70" src={projectCart01} alt="" />
-
-                        <div className=" absolute z-40 py-[10px] px-[25px] bg-gradient-to-r from-[#EB93FF] to-[#8515E0] rounded-full xl:mt-[280px] text-white flex items-center gap-2 ">
-                            < button className=" font-montserrat font-regular xl:text-[20px] text-white">Read More</button>
-                            < TbPlayerTrackNextFilled className="w-6 h-6" />
-                        </div>
-
-                    </div>
-                    {/* Project Cart - 02 */}
-                    <div className="py-[30px] px-[10px] flex flex-col items-center overflow-hidden w-[350px]">
-                        <h1 className="absolute z-40 xl:mt-[150px] font-montserrat font-bold xl:text-[20px] text-white">MERN Stack <br /> Web App with Nutrition <br /> Tracking & AI Food <br />Recommendation</h1>
-                        <img className="absolute z-30 rounded-xl w-[300px] opacity-70" src={projectCart02} alt="" />
-
-                        <div className=" absolute z-40 py-[10px] px-[25px] bg-gradient-to-r from-[#EB93FF] to-[#8515E0] rounded-full xl:mt-[280px] text-white flex items-center gap-2 ">
-                            < button className=" font-montserrat font-regular xl:text-[20px] text-white">Read More</button>
-                            < TbPlayerTrackNextFilled className="w-6 h-6" />
-                        </div>
-
-                    </div>
-                    {/* Project Cart - 02 */}
-                    <div className="py-[30px] px-[10px] flex flex-col items-center overflow-hidden w-[350px]">
-                        <h1 className="absolute z-40 xl:mt-[150px] font-montserrat font-bold xl:text-[20px] text-white">MERN Stack <br /> Web App with Nutrition <br /> Tracking & AI Food <br />Recommendation</h1>
-                        <img className="absolute z-30 rounded-xl w-[300px] opacity-70" src={projectCart03} alt="" />
-
-                        <div className=" absolute z-40 py-[10px] px-[25px] bg-gradient-to-r from-[#EB93FF] to-[#8515E0] rounded-full xl:mt-[280px] text-white flex items-center gap-2 ">
-                            < button className=" font-montserrat font-regular xl:text-[20px] text-white">Read More</button>
-                            < TbPlayerTrackNextFilled className="w-6 h-6" />
-                        </div>
-
-                    </div>
-                    {/* Project Cart - 02 */}
-                    <div className="py-[30px] px-[10px] flex flex-col items-center overflow-hidden w-[350px]">
-                        <h1 className="absolute z-40 xl:mt-[150px] font-montserrat font-bold xl:text-[20px] text-white">MERN Stack <br /> Web App with Nutrition <br /> Tracking & AI Food <br />Recommendation</h1>
-                        <img className="absolute z-30 rounded-xl w-[300px] opacity-70" src={projectCart04} alt="" />
-
-                        <div className=" absolute z-40 py-[10px] px-[25px] bg-gradient-to-r from-[#EB93FF] to-[#8515E0] rounded-full xl:mt-[280px] text-white flex items-center gap-2 ">
-                            < button className=" font-montserrat font-regular xl:text-[20px] text-white">Read More</button>
-                            < TbPlayerTrackNextFilled className="w-6 h-6" />
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-            {/* Footer */}
-            <div className="absolute z-50 w-full mt-[3000px] xl:mt-[3480px] w-full text-center bg-[#6a0d7b]  text-white xl:pt-[30px] h-[330px]">
-
-
-                <img src={logoBar} alt="Logo Bar" className="w-[400px] text-center mx-auto xl:mb-[20px] xl:mt-[50px]" />
-                <div className='flex items-center justify-center gap-3'>
-                    <FaFacebook size={30} />
-                    <IoLogoYoutube size={30} />
-                    <FaTwitter size={30} />
-                    <FaSquareInstagram size={30} />
-                    <FaLinkedin size={30} />
-                    <FaGithub size={30} />
-                </div>
-                < button className=" font-montserrat font-regular xl:text-[15px] text-white xl:my-[20px] opacity-60 ">All Copiright Recived 2025 | +94 030 76 71 | Powerd By ArtWave PVT(LTD)</button>
-
-
-
-
-
-
-            </div>
 
         </>
     );

@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-montserrat: "Montserrat", sans-serif;
+  --font-ibmmono: "IBM Plex Mono", monospace;
 }
+
 
 @keyframes marquee-horizontal {
   0% { transform: translateX(0); }
@@ -13,5 +14,27 @@
   display: flex;
   animation: marquee-horizontal 15s linear infinite;
 }
+
+/* hide scrollbar but allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.circle-hover {
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(var(--circle-r, 173), var(--circle-g, 117), var(--circle-b, 245), var(--circle-opacity, 0.1)) var(--circle-size, 240px),
+    transparent calc(var(--circle-size, 240px) * 2)
+  );
+  transition: background 0.5s ease, width 0.5s ease, height 0.5s ease;
+  pointer-events: none;
+}
+
+
 
 
