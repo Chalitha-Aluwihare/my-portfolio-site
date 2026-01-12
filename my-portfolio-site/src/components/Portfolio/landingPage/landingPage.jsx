@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { IoLogoYoutube } from "react-icons/io5";
 import { FaTwitter } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -34,8 +34,18 @@ import { ImPacman } from "react-icons/im";
 import { LuExternalLink } from "react-icons/lu";
 import { FaArrowCircleDown } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
-import Profile from '../../../assets/landingPage/profile.png';
+import { FaPlus } from "react-icons/fa";
+import { FaMinus } from "react-icons/fa";
+import Profile from '../../../assets/landingPage/Profile.png';
 import P01 from '../../../assets/landingPage/P01.jpeg';
+import P02 from '../../../assets/landingPage/P02.jpeg';
+import P03 from '../../../assets/landingPage/P03.jpeg';
+import P04 from '../../../assets/landingPage/P04.jpeg';
+import P05 from '../../../assets/landingPage/P05.png';
+import P06 from '../../../assets/landingPage/P06.png';
+import P07 from '../../../assets/landingPage/P07.png';
+import P08 from '../../../assets/landingPage/P08.png';
+import P09 from '../../../assets/landingPage/P09.png';
 import { motion, AnimatePresence } from "framer-motion";
 
 const LandingPage = () => {
@@ -105,6 +115,15 @@ const LandingPage = () => {
         setShow10(!show10); // toggle state
     };
 
+
+    {/* Projects Section view all buttons*/ }
+
+    const [pShow, setpShow] = useState(false);
+
+    const handleClick12 = () => {
+        setpShow(!pShow);
+    }
+
     {/* My jounary Section view all buttons*/ }
 
     const [jShow, setjShow] = useState(false);
@@ -122,6 +141,32 @@ const LandingPage = () => {
         return () => document.removeEventListener("mousemove", handleMouseMove);
     }, []);
 
+    {/* Scrolling Section 01*/ }
+    const projectsRef01 = useRef(null);
+
+    const scrollToProjects01 = () => {
+        projectsRef01.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    {/* Scrolling Section 01*/ }
+    const projectsRef02 = useRef(null);
+
+    const scrollToProjects02 = () => {
+        projectsRef02.current?.scrollIntoView({ behavior: "smooth" });
+    };
+    {/* Scrolling Section 01*/ }
+    const projectsRef03 = useRef(null);
+
+    const scrollToProjects03 = () => {
+        projectsRef03.current?.scrollIntoView({ behavior: "smooth" });
+    };
+    {/* Scrolling Section 01*/ }
+    const projectsRef04 = useRef(null);
+
+    const scrollToProjects04 = () => {
+        projectsRef04.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
     return (
         <>
             <>
@@ -132,42 +177,61 @@ const LandingPage = () => {
                     {/* LEFT FIXED SIDEBAR */}
                     <div className="lg:col-span-2  lg:sticky lg:top-0 lg:h-screen flex flex-col lg:mt-20 mt-5">
                         <img src={Profile} alt="Profile" className="w-[250px]" />
-                        <h2 className="font-ibmmono font-extrabold text-[40px] text-[#a263f2] leading-none mt-5">Chalitha Aluwihare</h2>
+                        <div className="flex items-end">
+                            <p className="font-ibmmono font-semibold leading-tight text-xl text-[#a263f2] mt-2 opacity-50">
+                                Mr.
+                            </p>
+                            <h2 className="font-ibmmono font-extrabold text-[40px] text-[#a263f2] leading-none mt-5">Chalitha</h2>
+                        </div>
+                        <h2 className="font-ibmmono font-extrabold text-[40px] text-[#a263f2] leading-none mt-5">Aluwihare</h2>
                         <p className="font-ibmmono font-semibold leading-tight text-sm text-[#dcdcdc] mt-2">
                             Aspiring Cybersecurity Engineer
                         </p>
                         <p className="font-ibmmono font-semibold leading-tight text-sm text-[#dcdcdc] mt-2">
-                            IT(Hons) Undergraduate
+                            Uva Wellassa University of Sri Lanka
                         </p>
+                        <p className="font-ibmmono font-semibold leading-tight text-sm text-[#dcdcdc] mt-2">
+                            ICT(Hons) Undergraduate
+                        </p>
+
+                        <hr className="border opacity-20 text-[#dcdcdc] mr-40 mt-4" />
+
                         <div className="flex items-center mt-3 gap-3">
 
-                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
+                            <p onClick={scrollToProjects01} className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
                                 About Me
                             </p>
                             <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer ">
                                 |
                             </p>
 
-                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
+                            <p onClick={scrollToProjects02} className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
                                 Journay
                             </p>
                             <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer ">
                                 |
                             </p>
-                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
+                            <p onClick={scrollToProjects03} className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
                                 Projects
                             </p>
                         </div>
                         <div className="flex items-center mt-3 gap-3">
+                            <a
+                                href="https://drive.google.com/file/d/1xtOe3Nwppv69MwZLHzmV7pGMjYhnML0T/view?usp=sharing"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300"
+                            >
+                                Resume Download
+                            </a>
 
-                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
-                                Resume Downlaod
-                            </p>
+
+
                             <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer ">
                                 |
                             </p>
 
-                            <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
+                            <p onClick={scrollToProjects04} className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
                                 Contact
                             </p>
 
@@ -175,11 +239,52 @@ const LandingPage = () => {
 
 
                         <div className='flex items-center gap-3 text-[#dcdcdc] mt-6'>
-                            <FaFacebook size={25} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
-                            <IoLogoYoutube size={25} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
 
-                            <FaLinkedin size={25} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
-                            <FaGithub size={25} className="text-white hover:text-[#E2A6FF] transition-colors duration-300" />
+
+                            <a
+                                href="https://lk.linkedin.com/in/chalitha-aluwihare-856781219?trk=public_post_feed-actor-name"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaLinkedin
+                                    size={25}
+                                    className="text-white hover:text-[#E2A6FF] transition-colors duration-300 cursor-pointer"
+                                />
+                            </a>
+
+                            <a
+                                href="https://github.com/Chalitha-Aluwihare"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaGithub
+                                    size={25}
+                                    className="text-white hover:text-[#E2A6FF] transition-colors duration-300 cursor-pointer"
+                                />
+                            </a>
+
+                            <a
+                                href="https://www.facebook.com/share/181TRKSzZP/?mibextid=wwXIfr"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FaFacebook
+                                    size={25}
+                                    className="text-white hover:text-[#E2A6FF] transition-colors duration-300 cursor-pointer"
+                                />
+                            </a>
+
+                            <a
+                                href="https://www.youtube.com/@ChalithaAluvihare"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <IoLogoYoutube
+                                    size={25}
+                                    className="text-white hover:text-[#E2A6FF] transition-colors duration-300 cursor-pointer"
+                                />
+                            </a>
+
                         </div>
                     </div>
 
@@ -190,30 +295,31 @@ const LandingPage = () => {
                     <div className="lg:col-span-3 lg:h-screen lg:overflow-y-auto no-scrollbar  text-[#dcdcdc] lg:mt-10 mt-5">
                         <div className="flex items-center mt-6 gap-3 mb-5">
                             {/*<ImPacman color="#a263f2" size={25} className="text-white" />*/}
-                            <h1 className="font-ibmmono font-bold text-xl text-[#a263f2]">Protecting Systems Preventing Trust</h1>
+                            <h1 ref={projectsRef01} className="font-ibmmono font-bold text-xl text-[#a263f2]">Protecting Systems Preventing Trust</h1>
                         </div>
                         <p className="font-ibmmono font-light mb-6 text-sm ml-3">
-                            <a href="https://www.example.com/cybersecurity" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
-                                Aspiring Cybersecurity Engineer
-                            </a> |
-                            <a href="https://www.uwu.ac.lk/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
-                                BICT(Hons) Undergraduate at Uva Wellassa University
-                            </a>. Passionate about
-                            <a href="https://www.kali.org/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
-                                ethical hacking
-                            </a>,
-                            <a href="https://www.cisco.com/c/en/us/products/security/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
-                                network security
-                            </a>, and protecting systems. Learning tools for
-                            <a href="https://www.offensive-security.com/pwk-oscp/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
-                                penetration testing
-                            </a>,
-                            <a href="https://www.linux.org/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
-                                Linux
-                            </a>, and
-                            <a href="https://owasp.org/" target="_blank" className="font-semibold text-white hover:text-purple-400 transition-colors duration-300 cursor-pointer">
-                                secure software development
-                            </a>. Open to internships and hands-on cybersecurity projects.
+
+
+                            I am a BICT (Hons) undergraduate at Uva Wellassa University of Sri Lanka,
+                            with a strong interest in Cybersecurity and SOC operations.
+                            <br></br>
+                            <br></br>
+                            I have completed industry-recognized certifications such as ISC2 Certified
+                            inCybersecurity (CC), Google Cybersecurity Professional Certificate, and
+                            Cisco Cybersecurity & Networking courses. I enjoy learning through hands-on
+                            projects including SIEM implementation, vulnerability scanning, penetration
+                            testing, honeypots, and cloud security labs.
+                            <br></br>
+                            <br></br>
+                            I have practical exposure to tools such as Microsoft Sentinel, Metasploit,
+                            Wireshark, Kali Linux, and basic Python scripting for cybersecurity.
+                            I am also exploring how AI can support security operations, including SIEM
+                            log analysis.
+                            <br></br>
+                            <br></br>
+                            Currently, I am seeking a Cybersecurity Internship where I can gain real-world
+                            experience in threat detection, incident response, and security monitoring,
+                            while continuing to grow as a cybersecurity professional.
                         </p>
 
 
@@ -824,7 +930,7 @@ const LandingPage = () => {
 
 
                         <hr className="border mt-13 opacity-20" />
-                        <div className="flex justify-between mt-6 gap-3">
+                        <div ref={projectsRef02} className="flex justify-between mt-6 gap-3">
 
                             <h1 className="font-ibmmono font-bold text-[#a263f2] text-xl">My Technology & Cybersecurity Journey</h1>
 
@@ -1170,7 +1276,7 @@ const LandingPage = () => {
                                 transition-all duration-300 cursor-pointer"
                             onClick={() => setjShow(!jShow)}
                         >
-                            {cShow ? "Show Less" : "View All 1+"}
+                            {jShow ? "Show Less" : "View All 1+"}
                         </button>
 
 
@@ -1179,11 +1285,12 @@ const LandingPage = () => {
                         <hr className="border mt-13 opacity-20" />
                         {/* Projects */}
 
-                        <div className="flex justify-between mt-6 gap-3 mb-7">
+                        <div ref={projectsRef03} className="flex justify-between mt-6 gap-3 mb-7">
 
                             <h1 className="font-ibmmono font-bold text-[#a263f2] text-xl">Highlights of My Projects</h1>
 
                         </div>
+                        {/* Project 01 */}
                         <div className="mt-10 p-4 rounded-xl border border-white/20
                             hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
                             transition-all duration-300 ">
@@ -1191,10 +1298,92 @@ const LandingPage = () => {
                             <div className="lg:flex items-start justify-between gap-5">
                                 <div className="flex-shrink-0">
                                     <div className="flex items-center gap-2">
-                                        <p className="font-light text-white opacity-50 text-[14px]">2021</p>
+                                        <p className="font-light text-white opacity-50 text-[14px]">2025</p>
 
                                         <a
-                                            href="https://www.linkedin.com/posts/chalitha-aluwihare-856781219_webdevelopment-tailwindcss-responsivedesign-activity-7399257520076185600-Ji0w"
+                                            href="https://lk.linkedin.com/in/chalitha-aluwihare-856781219?trk=public_post_feed-actor-name"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaLinkedin
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+
+                                        <a
+                                            href="https://github.com/Chalitha-Aluwihare/Cloud-Hosted-Honeypot"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaGithub
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+                                    </div>
+
+
+                                    <img src={P03} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Cloud-based Honeypot Deployment
+                                    </h3>
+
+                                    <div className="">
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">Problem</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Small and medium organizations lack visibility into real attack attempts.
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">What I Did</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Deployed a cloud honeypot and analyzed attacker behavior using logs.
+                                            </h1>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Honeypot
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Cloud Security Basics
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Threat Monitoring
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Log Analysis
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        {/* Project 02 */}
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300 ">
+
+                            <div className="lg:flex items-start justify-between gap-5">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center gap-2">
+                                        <p className="font-light text-white opacity-50 text-[14px]">2025</p>
+
+                                        <a
+                                            href="https://lk.linkedin.com/in/chalitha-aluwihare-856781219?trk=public_post_feed-actor-name"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -1217,28 +1406,48 @@ const LandingPage = () => {
                                     </div>
 
 
-                                    <img src={P01} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                    <img src={P05} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-ibmmono font-semibold text-white text-lg">
-                                        Responsive Grid Layout Practice for Beginners
+                                        SIEM Integration with AI (ChatGPT-Enhanced)
                                     </h3>
 
-                                    <h1 className="font-ibmmono text-[10px] font-light">
-                                        Adobe Photoshop is a powerful software used for editing,
-                                        designing, and creating images. It allows photo retouching,
-                                        graphic design, digital painting, and creating professional
-                                        visuals for web and print.
-                                    </h1>
+                                    <div className="">
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">Problem</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Traditional SIEM workflows generate many alerts that are hard to prioritize manually.
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">What I Did</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Integrated a SIEM platform with an AI assistant to enrich alerts and assist in incident triage. Built scripts to send telemetry to the AI, automate context lookup, and summarize risks.
+                                            </h1>
+                                        </div>
+                                    </div>
 
                                     <div className="flex gap-3 flex-wrap mt-3">
                                         <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
                                         transition-all duration-300">
-                                            ReactJS
+                                            SIEM
                                         </button>
                                         <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
                                         transition-all duration-300">
-                                            TailwindCSS
+                                            AI/ML Integration
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Python Scripting
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Alert Enrichment
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Incident Triage.
                                         </button>
 
                                     </div>
@@ -1249,6 +1458,7 @@ const LandingPage = () => {
 
 
                         </div>
+                        {/* Project 01 */}
                         <div className="mt-10 p-4 rounded-xl border border-white/20
                             hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
                             transition-all duration-300 ">
@@ -1256,10 +1466,10 @@ const LandingPage = () => {
                             <div className="lg:flex items-start justify-between gap-5">
                                 <div className="flex-shrink-0">
                                     <div className="flex items-center gap-2">
-                                        <p className="font-light text-white opacity-50 text-[14px]">2021</p>
+                                        <p className="font-light text-white opacity-50 text-[14px]">2025</p>
 
                                         <a
-                                            href="https://www.linkedin.com/posts/chalitha-aluwihare-856781219_webdevelopment-tailwindcss-responsivedesign-activity-7399257520076185600-Ji0w"
+                                            href="https://lk.linkedin.com/in/chalitha-aluwihare-856781219?trk=public_post_feed-actor-name"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -1270,7 +1480,7 @@ const LandingPage = () => {
                                         </a>
 
                                         <a
-                                            href="https://github.com/Chalitha-Aluwihare/responsive-ui-practice"
+                                            href="https://github.com/Chalitha-Aluwihare/Microsoft-Sentinel-SIEM"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -1282,28 +1492,44 @@ const LandingPage = () => {
                                     </div>
 
 
-                                    <img src={P01} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                    <img src={P06} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-ibmmono font-semibold text-white text-lg">
-                                        Responsive Grid Layout Practice for Beginners
+                                        Microsoft Sentinel SIEM Implementation
                                     </h3>
 
-                                    <h1 className="font-ibmmono text-[10px] font-light">
-                                        Adobe Photoshop is a powerful software used for editing,
-                                        designing, and creating images. It allows photo retouching,
-                                        graphic design, digital painting, and creating professional
-                                        visuals for web and print.
-                                    </h1>
+                                    <div className="">
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">Problem</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Organizations struggle to centralize security event logging and build detection logic.
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">What I Did</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Configured Microsoft Sentinel for log ingestion, analytics rules, and workbook visualizations. Developed custom detection rules and dashboards for security operations.
+                                            </h1>
+                                        </div>
+                                    </div>
 
                                     <div className="flex gap-3 flex-wrap mt-3">
                                         <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
                                         transition-all duration-300">
-                                            ReactJS
+                                            Microsoft Sentinel
                                         </button>
                                         <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
                                         transition-all duration-300">
-                                            TailwindCSS
+                                            Log Analytics
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Cloud SIEM
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Detection Engineering.
                                         </button>
 
                                     </div>
@@ -1314,7 +1540,7 @@ const LandingPage = () => {
 
 
                         </div>
-
+                        {/* Project 05 */}
                         <div className="mt-10 p-4 rounded-xl border border-white/20
                             hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
                             transition-all duration-300 ">
@@ -1322,10 +1548,10 @@ const LandingPage = () => {
                             <div className="lg:flex items-start justify-between gap-5">
                                 <div className="flex-shrink-0">
                                     <div className="flex items-center gap-2">
-                                        <p className="font-light text-white opacity-50 text-[14px]">2021</p>
+                                        <p className="font-light text-white opacity-50 text-[14px]">2026</p>
 
                                         <a
-                                            href="https://www.linkedin.com/posts/chalitha-aluwihare-856781219_webdevelopment-tailwindcss-responsivedesign-activity-7399257520076185600-Ji0w"
+                                            href="https://lk.linkedin.com/in/chalitha-aluwihare-856781219?trk=public_post_feed-actor-name"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -1336,7 +1562,7 @@ const LandingPage = () => {
                                         </a>
 
                                         <a
-                                            href="https://github.com/Chalitha-Aluwihare/responsive-ui-practice"
+                                            href="https://github.com/Chalitha-Aluwihare/Vulnerability-Scanner-Deployment"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -1348,28 +1574,44 @@ const LandingPage = () => {
                                     </div>
 
 
-                                    <img src={P01} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                    <img src={P02} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-ibmmono font-semibold text-white text-lg">
-                                        Responsive Grid Layout Practice for Beginners
+                                        Vulnerability Scanner Deployment
                                     </h3>
 
-                                    <h1 className="font-ibmmono text-[10px] font-light">
-                                        Adobe Photoshop is a powerful software used for editing,
-                                        designing, and creating images. It allows photo retouching,
-                                        graphic design, digital painting, and creating professional
-                                        visuals for web and print.
-                                    </h1>
+                                    <div className="">
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">Problem</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Many organizations in Sri Lanka face risks due to unpatched systems and weak security settings.
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">What I Did</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Deployed a vulnerability scanner and identified common system and network vulnerabilities.
+                                            </h1>
+                                        </div>
+                                    </div>
 
                                     <div className="flex gap-3 flex-wrap mt-3">
                                         <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
                                         transition-all duration-300">
-                                            ReactJS
+                                            Vulnerability Scanning
                                         </button>
                                         <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
                                         transition-all duration-300">
-                                            TailwindCSS
+                                            Linux
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Basic Risk Analysis
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Network Security
                                         </button>
 
                                     </div>
@@ -1380,6 +1622,8 @@ const LandingPage = () => {
 
 
                         </div>
+
+                        {/* Project 03 */}
                         <div className="mt-10 p-4 rounded-xl border border-white/20
                             hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
                             transition-all duration-300 ">
@@ -1387,10 +1631,10 @@ const LandingPage = () => {
                             <div className="lg:flex items-start justify-between gap-5">
                                 <div className="flex-shrink-0">
                                     <div className="flex items-center gap-2">
-                                        <p className="font-light text-white opacity-50 text-[14px]">2021</p>
+                                        <p className="font-light text-white opacity-50 text-[14px]">2026</p>
 
                                         <a
-                                            href="https://www.linkedin.com/posts/chalitha-aluwihare-856781219_webdevelopment-tailwindcss-responsivedesign-activity-7399257520076185600-Ji0w"
+                                            href="https://lk.linkedin.com/in/chalitha-aluwihare-856781219?trk=public_post_feed-actor-name"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -1401,7 +1645,7 @@ const LandingPage = () => {
                                         </a>
 
                                         <a
-                                            href="https://github.com/Chalitha-Aluwihare/responsive-ui-practice"
+                                            href="https://github.com/Chalitha-Aluwihare/Metasploit-for-Beginners-Ethical-Penetration-Testing"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -1413,29 +1657,42 @@ const LandingPage = () => {
                                     </div>
 
 
-                                    <img src={P01} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                    <img src={P07} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-ibmmono font-semibold text-white text-lg">
-                                        Responsive Grid Layout Practice for Beginners
+                                        Metasploit for Beginners — Ethical Penetration Testing
                                     </h3>
 
-                                    <h1 className="font-ibmmono text-[10px] font-light">
-                                        Adobe Photoshop is a powerful software used for editing,
-                                        designing, and creating images. It allows photo retouching,
-                                        graphic design, digital painting, and creating professional
-                                        visuals for web and print.
-                                    </h1>
+                                    <div className="">
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">Problem</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Learning penetration testing tools in a safe and ethical way is challenging for newcomers.
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">What I Did</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Created a beginner-friendly guide to Metasploit fundamentals and executed ethical exploitation scenarios in a controlled lab.
+                                            </h1>
+                                        </div>
+                                    </div>
 
                                     <div className="flex gap-3 flex-wrap mt-3">
                                         <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
                                         transition-all duration-300">
-                                            ReactJS
+                                            Metasploit Framework
                                         </button>
                                         <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
                                         transition-all duration-300">
-                                            TailwindCSS
+                                            Ethical Hacking
                                         </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Exploit Development Basics
+                                        </button>
+
 
                                     </div>
 
@@ -1444,7 +1701,11 @@ const LandingPage = () => {
                             </div>
 
 
+
+
                         </div>
+
+                        {/* Project 03 */}
                         <div className="mt-10 p-4 rounded-xl border border-white/20
                             hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
                             transition-all duration-300 ">
@@ -1452,10 +1713,10 @@ const LandingPage = () => {
                             <div className="lg:flex items-start justify-between gap-5">
                                 <div className="flex-shrink-0">
                                     <div className="flex items-center gap-2">
-                                        <p className="font-light text-white opacity-50 text-[14px]">2021</p>
+                                        <p className="font-light text-white opacity-50 text-[14px]">2026</p>
 
                                         <a
-                                            href="https://www.linkedin.com/posts/chalitha-aluwihare-856781219_webdevelopment-tailwindcss-responsivedesign-activity-7399257520076185600-Ji0w"
+                                            href="https://lk.linkedin.com/in/chalitha-aluwihare-856781219?trk=public_post_feed-actor-name"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -1466,7 +1727,7 @@ const LandingPage = () => {
                                         </a>
 
                                         <a
-                                            href="https://github.com/Chalitha-Aluwihare/responsive-ui-practice"
+                                            href="https://github.com/Chalitha-Aluwihare/"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -1478,28 +1739,284 @@ const LandingPage = () => {
                                     </div>
 
 
-                                    <img src={P01} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                    <img src={P04} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-ibmmono font-semibold text-white text-lg">
-                                        Responsive Grid Layout Practice for Beginners
+                                        Wireshark – Network Traffic Analysis
                                     </h3>
 
-                                    <h1 className="font-ibmmono text-[10px] font-light">
-                                        Adobe Photoshop is a powerful software used for editing,
-                                        designing, and creating images. It allows photo retouching,
-                                        graphic design, digital painting, and creating professional
-                                        visuals for web and print.
-                                    </h1>
+                                    <div className="">
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">Problem</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Suspicious traffic in campus and office networks can lead to security incidents.
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">What I Did</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Captured and analyzed network packets to understand normal and abnormal traffic.
+                                            </h1>
+                                        </div>
+                                    </div>
 
                                     <div className="flex gap-3 flex-wrap mt-3">
                                         <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
                                         transition-all duration-300">
-                                            ReactJS
+                                            Wireshark
                                         </button>
                                         <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
                                         transition-all duration-300">
-                                            TailwindCSS
+                                            TCP/IP
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Network Monitoring
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Basic Troubleshooting
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+                        {/* Project 04 */}
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300 ">
+
+                            <div className="lg:flex items-start justify-between gap-5">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center gap-2">
+                                        <p className="font-light text-white opacity-50 text-[14px]">2026</p>
+
+                                        <a
+                                            href="https://lk.linkedin.com/in/chalitha-aluwihare-856781219?trk=public_post_feed-actor-name"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaLinkedin
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+
+                                        <a
+                                            href="https://github.com/Chalitha-Aluwihare/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaGithub
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+                                    </div>
+
+
+                                    <img src={P04} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Wireshark – Detect Network Anomalies
+                                    </h3>
+
+                                    <div className="">
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">Problem</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Network attacks often go unnoticed due to lack of monitoring.
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">What I Did</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Detected abnormal network behavior using packet analysis techniques.
+                                            </h1>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Anomaly Detection
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Network Security
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Threat Identification
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        {/* Project 05 */}
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300 ">
+
+                            <div className="lg:flex items-start justify-between gap-5">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center gap-2">
+                                        <p className="font-light text-white opacity-50 text-[14px]">2026</p>
+
+                                        <a
+                                            href="https://lk.linkedin.com/in/chalitha-aluwihare-856781219?trk=public_post_feed-actor-name"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaLinkedin
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+
+                                        <a
+                                            href="https://github.com/Chalitha-Aluwihare/kali-linux-learning"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaGithub
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+                                    </div>
+
+
+                                    <img src={P08} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Kali Linux Learning Notes (Cybersecurity OS)
+                                    </h3>
+
+                                    <div className="">
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">Problem</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Many security tools on Kali have steep learning curves for students.
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">What I Did</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Compiled comprehensive study notes and command references while learning Kali Linux for ethical/security use.
+                                            </h1>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Kali Linux
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Command Line Tools
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        {/* Project 06 */}
+                        <div className="mt-10 p-4 rounded-xl border border-white/20
+                            hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 
+                            transition-all duration-300 ">
+
+                            <div className="lg:flex items-start justify-between gap-5">
+                                <div className="flex-shrink-0">
+                                    <div className="flex items-center gap-2">
+                                        <p className="font-light text-white opacity-50 text-[14px]">2026</p>
+
+                                        <a
+                                            href="https://lk.linkedin.com/in/chalitha-aluwihare-856781219?trk=public_post_feed-actor-name"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaLinkedin
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+
+                                        <a
+                                            href="https://github.com/Chalitha-Aluwihare/python-for-cybersecurity-practice"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <FaGithub
+                                                size={20}
+                                                className="text-white hover:text-[#D98CFF] cursor-pointer transition-colors duration-300"
+                                            />
+                                        </a>
+                                    </div>
+
+
+                                    <img src={P09} alt="" className="lg:w-[180px] w-full mb-3 lg:mb-0 rounded-lg mt-3 border border-white/20" />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="font-ibmmono font-semibold text-white text-lg">
+                                        Python for Cybersecurity Practice
+                                    </h3>
+
+                                    <div className="">
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">Problem</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Cybersecurity professionals need automation and scripting skills to handle repetitive security tasks.
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <h1 className="font-ibmmono text-[15px] font-semibold">What I Did</h1>
+                                            <h1 className="font-ibmmono text-[12px] font-light">
+                                                Completed hands-on Python exercises focused on networking, parsing logs, automation, and security scripting from a structured course.
+                                            </h1>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex gap-3 flex-wrap mt-3">
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Python
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Networking
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Automation
+                                        </button>
+                                        <button className="bg-white/10 backdrop-blur-sm text-[#D98CFF]  text-sm font-semibold py-1 px-3 rounded-full 
+                                        transition-all duration-300">
+                                            Security Scripts.
                                         </button>
 
                                     </div>
@@ -1510,6 +2027,14 @@ const LandingPage = () => {
 
 
                         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -1521,8 +2046,21 @@ const LandingPage = () => {
 
 
                         <hr className="border mt-13 opacity-50" />
-                        <p className="mt-10 font-light text-[10px] font-ibmmono">Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Next.js and Tailwind CSS, deployed with Vercel. All text is set in the Inter typeface.</p>
-                        <p className="mb-30 mt-2 font-light text-[9px] font-ibmmono">© 2025 Chalitha Aluwihare. All rights reserved.</p>
+                        <p ref={projectsRef04} className="mt-10 font-light text-[10px] font-ibmmono">
+                            Loosely designed in Figma and coded in Visual Studio Code by yours truly.
+                            Built with React.js and Tailwind CSS, deployed with Vercel.
+                            All text is set in the Inter typeface.
+                        </p>
+
+                        <p className="mb-2 mt-2 font-light text-[15px] font-ibmmono flex justify-center">
+                            Contact: +94 74 030 7671 · chalithaaluwihare@gmail.com
+                        </p>
+
+                        <p className="mb-30 mt-2 font-light text-[10px] font-ibmmono flex justify-center">
+                            © 2025 Chalitha Aluwihare. All rights reserved.
+                        </p>
+
+
 
 
 
