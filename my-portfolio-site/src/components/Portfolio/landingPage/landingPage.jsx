@@ -178,9 +178,7 @@ const LandingPage = () => {
                     <div className="lg:col-span-2  lg:sticky lg:top-0 lg:h-screen flex flex-col lg:mt-20 mt-5">
                         <img src={Profile} alt="Profile" className="w-[250px]" />
                         <div className="flex items-end">
-                            <p className="font-ibmmono font-semibold leading-tight text-xl text-[#a263f2] mt-2 opacity-50">
-                                Mr.
-                            </p>
+                            
                             <h2 className="font-ibmmono font-extrabold text-[40px] text-[#a263f2] leading-none mt-5">Chalitha</h2>
                         </div>
                         <h2 className="font-ibmmono font-extrabold text-[40px] text-[#a263f2] leading-none mt-5">Aluwihare</h2>
@@ -206,7 +204,7 @@ const LandingPage = () => {
                             </p>
 
                             <p onClick={scrollToProjects02} className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer hover:text-purple-400 transition-colors duration-300">
-                                Journay
+                                Journey
                             </p>
                             <p className="font-ibmmono font-light text-sm text-white decoration-purple-400 decoration-2 cursor-pointer ">
                                 |
@@ -295,12 +293,12 @@ const LandingPage = () => {
                     <div className="lg:col-span-3 lg:h-screen lg:overflow-y-auto no-scrollbar  text-[#dcdcdc] lg:mt-10 mt-5">
                         <div className="flex items-center mt-6 gap-3 mb-5">
                             {/*<ImPacman color="#a263f2" size={25} className="text-white" />*/}
-                            <h1 ref={projectsRef01} className="font-ibmmono font-bold text-xl text-[#a263f2]">Protecting Systems Preventing Trust</h1>
+                            <h1 ref={projectsRef01} className="font-ibmmono font-bold text-xl text-[#a263f2]">Security Beyond Code</h1>
                         </div>
                         <p className="font-ibmmono font-light mb-6 text-sm ml-3">
 
 
-                            I am a BICT (Hons) undergraduate at Uva Wellassa University of Sri Lanka,
+                            I am a ICT (Hons) undergraduate at Uva Wellassa University of Sri Lanka,
                             with a strong interest in Cybersecurity and SOC operations.
                             <br></br>
                             <br></br>
