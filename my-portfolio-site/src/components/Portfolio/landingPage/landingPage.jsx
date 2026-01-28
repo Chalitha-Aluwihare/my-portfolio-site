@@ -178,7 +178,7 @@ const LandingPage = () => {
                     <div className="lg:col-span-2  lg:sticky lg:top-0 lg:h-screen flex flex-col lg:mt-20 mt-5">
                         <img src={Profile} alt="Profile" className="w-[250px]" />
                         <div className="flex items-end">
-                            
+
                             <h2 className="font-ibmmono font-extrabold text-[40px] text-[#a263f2] leading-none mt-5">Chalitha</h2>
                         </div>
                         <h2 className="font-ibmmono font-extrabold text-[40px] text-[#a263f2] leading-none mt-5">Aluwihare</h2>
@@ -296,29 +296,26 @@ const LandingPage = () => {
                             <h1 ref={projectsRef01} className="font-ibmmono font-bold text-xl text-[#a263f2]">Security Beyond Code</h1>
                         </div>
                         <p className="font-ibmmono font-light mb-6 text-sm ml-3">
-
-
-                            I am a ICT (Hons) undergraduate at Uva Wellassa University of Sri Lanka,
-                            with a strong interest in Cybersecurity and SOC operations.
+                            I am a third-year undergraduate with a strong interest in Information Security
+                            and Cybersecurity, currently building a solid foundation in core security concepts.
                             <br></br>
                             <br></br>
-                            I have completed industry-recognized certifications such as ISC2 Certified
-                            inCybersecurity (CC), Google Cybersecurity Professional Certificate, and
-                            Cisco Cybersecurity & Networking courses. I enjoy learning through hands-on
-                            projects including SIEM implementation, vulnerability scanning, penetration
-                            testing, honeypots, and cloud security labs.
+                            My learning areas include network security, web application security,
+                            vulnerability scanning, and cloud security fundamentals. I enjoy working
+                            with hands-on labs and practical exercises that help me understand real-world
+                            security challenges.
                             <br></br>
                             <br></br>
-                            I have practical exposure to tools such as Microsoft Sentinel, Metasploit,
-                            Wireshark, Kali Linux, and basic Python scripting for cybersecurity.
-                            I am also exploring how AI can support security operations, including SIEM
-                            log analysis.
+                            I am continuously improving my technical and analytical skills by exploring
+                            security tools, attack methodologies, and defensive techniques, while staying
+                            curious about emerging threats and technologies.
                             <br></br>
                             <br></br>
-                            Currently, I am seeking a Cybersecurity Internship where I can gain real-world
-                            experience in threat detection, incident response, and security monitoring,
-                            while continuing to grow as a cybersecurity professional.
+                            Currently, I am seeking an Information Security Internship where I can apply
+                            my knowledge, contribute to security operations, and grow as a dedicated
+                            security professional.
                         </p>
+
 
 
 
@@ -574,10 +571,10 @@ const LandingPage = () => {
 
                                 </div>
                                 <p className="font-ibmmono text-md font-semibold mb-1">
-                                    ISC² Organization
+                                    In Progress (Re-attempt planned)
                                 </p>
                                 <p className="font-ibmmono text-sm font-light mb-1">
-                                    Credential ID 2453678
+                                    Credential ID XXXXXXXXXX
                                 </p>
 
 
